@@ -12,16 +12,19 @@ val recursiveFontFamily = FontFamily(
     Font(R.font.recursive_regular, FontWeight.Normal)
 )
 
+val quicksandFontFamily = FontFamily(
+    Font(R.font.quicksand_regular, FontWeight.Normal),
+    Font(R.font.quicksand_medium, FontWeight.Medium)
+)
+
 // Set of Material typography styles to start with
 val Typography = Typography(
     defaultFontFamily = recursiveFontFamily,
     body1 = TextStyle(
-        fontFamily = recursiveFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     ),
     button = TextStyle(
-        fontFamily = recursiveFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     )

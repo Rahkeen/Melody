@@ -43,7 +43,9 @@ fun MelodyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable
         typography = Typography,
         shapes = Shapes,
     ) {
-        content()
+        CompositionLocalProvider(LocalIndication provides playful()) {
+            content()
+        }
     }
 }
 
