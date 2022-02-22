@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.rikin.melody.ui.FilledButton
 import com.rikin.melody.ui.IconButton
+import com.rikin.melody.ui.SelectButton
 import com.rikin.melody.ui.TextButton
 import com.rikin.melody.ui.theme.MelodyTheme
 
@@ -35,6 +36,7 @@ class MainActivity : ComponentActivity() {
                         FilledButton(action = {})
                         TextButton(action = {})
                         IconButton(action = {})
+                        SelectButton(action = {})
                     }
                 }
             }
