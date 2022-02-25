@@ -1,12 +1,18 @@
 import android.graphics.Path
-import androidx.compose.animation.core.*
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -68,11 +74,10 @@ class ClipShape(private val progress: Float = 0F) : Shape {
     density: Density
   ): Outline {
     val path: Path = Path().apply {
-      addRect(
-        0F,
-        0F,
-        size.width,
-        size.height * progress,
+      addCircle(
+        size.width / 2,
+        size.height / 2,
+        size.width * progress,
         Path.Direction.CW
       )
     }
